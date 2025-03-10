@@ -68,7 +68,7 @@ int print_co_stats(char *wordlist_file)
 
 int main(int argc, char *argv[])
 {
-    int opt, option_index, mc_used, fc_used;
+    int opt, option_index, mc_used = 0, fc_used = 0;
     sds wordlist_file = sdsempty();
     long num_cores;
 
@@ -118,8 +118,6 @@ int main(int argc, char *argv[])
         {"num-cpu-cores", required_argument, NULL, 0},
         {"proxy", required_argument, NULL, 'x'},
         {"timeout", required_argument, NULL, 0},
-        {"min-l", required_argument, NULL, 0},
-        {"max-l", required_argument, NULL, 0},
         {"mc", required_argument, NULL, 0},
         {"fc", required_argument, NULL, 0},
         {"mw", required_argument, NULL, 0},
