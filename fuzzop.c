@@ -448,6 +448,7 @@ void *fuzz_worker(void *arg __attribute__((unused)))
         curl_easy_setopt(sock->curl, CURLOPT_USERAGENT, co.user_agent);
         curl_easy_setopt(sock->curl, CURLOPT_SSL_VERIFYPEER,
                          0); /* This is necessary for missing certificates */
+        curl_easy_setopt(sock->curl, CURLOPT_SSL_VERIFYHOST, 0L);
         curl_easy_setopt(sock->curl, CURLOPT_TIMEOUT, (long)(co.timeout));
         if (sdslen(co.cookie))
         {
