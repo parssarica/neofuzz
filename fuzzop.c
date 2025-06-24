@@ -695,6 +695,7 @@ void start_fuzz(char *wordlist_file)
     if (fptr == NULL)
     {
         perror("fopen");
+        printf("%s\n", wordlist_file);
         exit(-1);
     }
 
