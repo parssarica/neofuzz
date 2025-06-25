@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
     co.method = sdsempty();
     co.user_agent =
         sdsnew("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-               "(KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.3");
+               "(KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36");
     co.max_content_length = -1;
     co.timeout = 10;
     co.verbose = 0;
