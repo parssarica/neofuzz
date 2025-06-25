@@ -480,7 +480,9 @@ void *fuzz_worker(void *arg __attribute__((unused)))
                     break;
                 }
                 nw = strlen(w);
-                if (sock->fuzz_word[nw - 1] == '\n')
+                if (nw >= 2 && sock->fuzz_word[nw - 2] == '\r')
+                    sock->fuzz_word[nw - 2] = 0;
+                else if (nw >= 1 && sock->fuzz_word[nw - 1] == '\n')
                     sock->fuzz_word[nw - 1] = 0;
 
                 if (co.encode_option) /*url encode*/
