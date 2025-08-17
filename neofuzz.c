@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
     co.fline = sdsempty();
     co.post_data = sdsempty();
     co.resolve_as = sdsempty();
-    co.headers = sdsempty();
+    co.headers = sdsnew("Accept-Encoding: gzip\n");
     co.cookie = sdsempty();
     co.method = sdsempty();
     co.user_agent =
