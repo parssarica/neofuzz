@@ -28,8 +28,8 @@ neofuzz@neofuzz:~$ make && sudo make install
 ### Alpine Linux
 In Alpine Linux, you can install dependencies with this command and build it by make:
 ```
-neofuzz@neofuzz:~$ sudo apk add curl-dev libcurl musl-dev gcc make
-neofuzz@neofuzz:~$ make && sudo make install
+root@neofuzz:~$ apk add curl-dev libcurl musl-dev gcc make
+root@neofuzz:~$ make && sudo make install
 ```
 
 ### Opensuse based distros
@@ -48,7 +48,7 @@ neofuzz@neofuzz:~$ make && sudo make install
 ## FreeBSD
 In FreeBSD, you can install dependencies with this command and build it by make:
 ```
-neofuzz@neofuzz:~$ sudo pkg add curl gcc make
+neofuzz@neofuzz:~$ doas pkg add curl gcc make
 neofuzz@neofuzz:~$ make && sudo make install
 ```
 # Neofuzz Usage
@@ -287,7 +287,7 @@ ffuf@ffuf:~$ ffuf -w rockyou.txt -u http://10.0.0.1/FUZZ -t 100
 ### 500 parallel sockets / threads
 
 ```
-neofuzz@neofuzz:~$ neofuzz -w rockyou.txt -u 10.0.0.1/FUZZ --user-agent "Fuzz Faster U Fool v1.0.2" -p 500
+neofuzz@neofuzz:~$ neofuzz -w rockyou.txt -u http://10.0.0.1/FUZZ --user-agent "Fuzz Faster U Fool v1.0.2" -p 500
 ```
 ```
 ffuf@ffuf:~$ ffuf -w rockyou.txt -u http://10.0.0.1/FUZZ -t 500
