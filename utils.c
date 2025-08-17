@@ -24,7 +24,7 @@ void help(void)
     printf("neofuzz <args>\n");
     printf("\nOptions:\n");
     printf("  -h/--help\t Shows this help message and exit\n");
-    printf("  -v/--version\t Shows version\n");
+    printf("  -V/--version\t Shows version\n");
     /* Mandatory */
     printf("\nMandatory:\n");
     printf("  -u/--url\t Specifies the url\n");
@@ -77,7 +77,7 @@ void help(void)
            "IP. Ex: www.new-domain.com:80:1.2.3.4\n");
 
     printf("  --disable-keep-alive\t Disables keep alive\n");
-    printf("  --verbose\t\t Enables verbose mode\n");
+    printf("  -v/--verbose\t\t Enables verbose mode\n");
     printf("  --show-error\t\t Shows errors occured during fuzzing\n");
     printf("  --poll-mode\t\t Easy on cpu, but a little bit slower on high "
            "bandwidth connection\n");
