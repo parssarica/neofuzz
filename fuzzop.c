@@ -115,8 +115,11 @@ static inline int recv_reply(t_socks *sock)
     self_content_length = (int)sdslen(sock->content);
     if (self_content_length > content_length)
     {
+        if (content_length != -1)
+        {
+            self_calculating = 1;
+        }
         content_length = self_content_length;
-        self_calculating = 1;
     }
 
     for (j = 0; j < fuzz_filters.sc_sh_count; j++)
@@ -450,6 +453,7 @@ void *fuzz_worker(void *arg __attribute__((unused)))
                          0); /* This is necessary for missing certificates */
         curl_easy_setopt(sock->curl, CURLOPT_SSL_VERIFYHOST, 0L);
         curl_easy_setopt(sock->curl, CURLOPT_TIMEOUT, (long)(co.timeout));
+        curl_easy_setopt(sock->curl, CURLOPT_ACCEPT_ENCODING, "");
         if (sdslen(co.cookie))
         {
             curl_easy_setopt(sock->curl, CURLOPT_COOKIE, co.cookie);

@@ -55,7 +55,7 @@ int print_co_stats(char *wordlist_file)
     if (co.verbose)
         printf("Verbose mode: Enabled\n");
     if (co.poll_mode)
-        printf("Poll Mode: Enabled\n");
+        printf("Poll mode: Enabled\n");
     if (co.disable_keep_alive)
         printf("Keep TCP connection alive: Disabled\n");
     if (co.encode_option)
@@ -85,12 +85,12 @@ int main(int argc, char *argv[])
     co.fline = sdsempty();
     co.post_data = sdsempty();
     co.resolve_as = sdsempty();
-    co.headers = sdsnew("Accept-Encoding: gzip\n");
+    co.headers = sdsempty();
     co.cookie = sdsempty();
     co.method = sdsempty();
     co.user_agent =
         sdsnew("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-               "(KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36");
+               "(KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36");
     co.max_content_length = -1;
     co.timeout = 10;
     co.verbose = 0;
