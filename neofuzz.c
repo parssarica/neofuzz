@@ -365,7 +365,7 @@ int main(int argc, char *argv[])
         co.actual_cpu_cores = co.socks_count;
     }
 
-    if (!strstr(co.base_url, "FUZZ"))
+    if (!strstr(co.base_url, "FUZZ") && !strstr(co.post_data, "FUZZ"))
     {
         printf("FUZZ placeholder missing in the URL.\n");
         goto exit;
