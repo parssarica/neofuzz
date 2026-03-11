@@ -1,0 +1,5 @@
+[requires]
+libcurl/[>=8.0 <9.0]
+
+[generators]
+PkgConfigDeps
