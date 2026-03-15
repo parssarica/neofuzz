@@ -1,0 +1,10 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "neofuzz",
+  "version": "0.9.8",
+  "description": "A very fast web fuzzer.",
+  "homepage": "https://github.com/parssarica/neofuzz",
+  "dependencies": [
+    "curl"
+  ]
+}
