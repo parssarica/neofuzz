@@ -300,9 +300,7 @@ int main(int argc, char *argv[])
             }
             break;
         case '?':
-            // fprintf(stderr, "Unknown option: %s\n", argv[option_index]);
-            // goto exit;
-            break;
+            goto exit;
         default:
             help();
             goto exit;
